@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/Aufgabe/">
     <Project Path="04_WerteRefTypes/04_WerteRefTypes.csproj" Id="26e820c0-a093-47f6-8bfc-144c3c283274" />
+    <Project Path="AufgabeEinkommenssteuer/AufgabeEinkommenssteuer.csproj" Id="0cf12a5f-6a3f-4dfb-ad71-38d66b6deb9f" />
     <Project Path="AufgabeMaximumArray/AufgabeMaximumArray.csproj" />
     <Project Path="AufgabeTextRueckwaerts/AufgabeTextRueckwaerts.csproj" />
   </Folder>
