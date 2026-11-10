@@ -14,6 +14,8 @@
  * Est > 20350 zahlt man die 5,5%
  */
 
+using System.Globalization;
+
 namespace AufgabeEinkommenssteuer;
 
 internal class Program
@@ -64,7 +66,8 @@ internal class Program
             Console.WriteLine($"                     Bruttoeinkommmen: {bruttoEinkommen:C}");
             //Console.WriteLine($"Geschätzte Einkommensteuer: {Math.Ceiling(est).ToString("C")}");
             Console.WriteLine($"                      Einkommensteuer: {est:C}");
-            Console.WriteLine($"                 Solidaritätszuschlag: {soli:C}");
+            Console.WriteLine($"                 Solidaritätszuschlag: {soli.ToString("C", CultureInfo.GetCultureInfo("de-DE"))}");
+            
         }
         else
         {
