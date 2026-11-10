@@ -56,12 +56,15 @@ internal class Program
                 est = 0.45m * bruttoEinkommen - 19470.38m; // 45% Steuersatz
             }
 
+
+            decimal soli = est > 20350 ? (est * 0.055m) : 0.0m;
             // Ausgabe der Ergebnisse
             Console.WriteLine($"\n\nErgebnis #####################################################");
             //Console.WriteLine($"\nGrundfreibetrag: {grundfreibetrag:C}");
             Console.WriteLine($"                     Bruttoeinkommmen: {bruttoEinkommen:C}");
             //Console.WriteLine($"Geschätzte Einkommensteuer: {Math.Ceiling(est).ToString("C")}");
             Console.WriteLine($"                      Einkommensteuer: {est:C}");
+            Console.WriteLine($"                 Solidaritätszuschlag: {soli:C}");
         }
         else
         {
