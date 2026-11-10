@@ -1,9 +1,11 @@
 <Solution>
   <Folder Name="/Aufgabe/">
+    <Project Path="04_WerteRefTypes/04_WerteRefTypes.csproj" Id="26e820c0-a093-47f6-8bfc-144c3c283274" />
     <Project Path="AufgabeMaximumArray/AufgabeMaximumArray.csproj" />
     <Project Path="AufgabeTextRueckwaerts/AufgabeTextRueckwaerts.csproj" />
   </Folder>
   <Project Path="01_HelloWorld/01_HelloWorld.csproj" />
   <Project Path="02_HelloWorldReloaded/02_HelloWorldReloaded.csproj" />
   <Project Path="03_BasicTypes/03_BasicTypes.csproj" />
+  <Project Path="04_ControlFlows/04_ControlFlows.csproj" Id="b9fb6efe-cbc5-490f-abaa-3a3179fb9f1d" />
 </Solution>

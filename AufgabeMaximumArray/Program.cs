@@ -27,7 +27,7 @@ namespace AufgabeMaximumArray
             Console.WriteLine(myNumbers[1..3]);
 
             int[] neu = [.. myNumbers, 5];
-            int[] neu2 = myNumbers[..];
+            int[] neu2 = myNumbers[..]; //Spread-Operator
             Console.WriteLine(neu);
             
         }
