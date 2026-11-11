@@ -2,6 +2,7 @@
   <Folder Name="/Aufgabe/">
     <Project Path="AufgabeEinkommenssteuer/AufgabeEinkommenssteuer.csproj" Id="0cf12a5f-6a3f-4dfb-ad71-38d66b6deb9f" />
     <Project Path="AufgabeEinkommenssteuerOOP/AufgabeEinkommenssteuerOOP.csproj" Id="005bc45d-7f76-4160-86f7-1c33e2642655" />
+    <Project Path="AufgabeGetraenk/AufgabeGetraenk.csproj" Id="c2bc8d50-2e53-4862-8ecb-c885f366542b" />
     <Project Path="AufgabeMaximumArray/AufgabeMaximumArray.csproj" />
     <Project Path="AufgabeTextRueckwaerts/AufgabeTextRueckwaerts.csproj" />
   </Folder>
