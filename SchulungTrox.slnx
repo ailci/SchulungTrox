@@ -18,4 +18,7 @@
   <Project Path="06_Vererbung/06_Vererbung.csproj" Id="63571c42-293d-4d34-b5a6-991345d7ee92" />
   <Project Path="07_Generics/07_Generics.csproj" Id="65e4d17d-2d9d-4f53-8036-e96e306c66da" />
   <Project Path="08_Collections/08_Collections.csproj" Id="6fcc3b5d-d0cb-4c31-905a-e06d8c35fa03" />
+  <Project Path="09_Linq/09_Linq.csproj" Id="821b68fa-fd4e-4c61-842f-7fee10840b43" />
+  <Project Path="10_ExtensionMethods/10_ExtensionMethods.csproj" Id="960d3a86-c5c5-4a7f-aab9-af9f2579cb74" />
+  <Project Path="11_Funcs/11_Funcs.csproj" Id="fb580167-83fc-4717-a0ca-bd52b3c159af" />
 </Solution>
