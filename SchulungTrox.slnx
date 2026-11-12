@@ -13,4 +13,5 @@
   <Project Path="04_WerteRefTypes/04_WerteRefTypes.csproj" Id="26e820c0-a093-47f6-8bfc-144c3c283274" />
   <Project Path="05_Klassen/05_Klassen.csproj" Id="98e25a40-1936-4842-9fe5-81f3f794655e" />
   <Project Path="06_Vererbung/06_Vererbung.csproj" Id="63571c42-293d-4d34-b5a6-991345d7ee92" />
+  <Project Path="07_Generics/07_Generics.csproj" Id="65e4d17d-2d9d-4f53-8036-e96e306c66da" />
 </Solution>
