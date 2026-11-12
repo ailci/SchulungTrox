@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AufgabeGetraenk
+namespace AufgabeGetraenk;
+
+public class Cleanser : ILiquid
 {
-    internal class Cleanser
-    {
-    }
+    public string Name { get; set; } = "The Donald";
+    public bool IsToxic { get; set; } = true;
 }

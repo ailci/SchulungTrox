@@ -4,18 +4,7 @@ using System.Text;
 
 namespace AufgabeGetraenk;
 
-public class Trinkhalle<T> where T : IDrink
+public class Trinkhalle
 {
-    private T[] drinks = [];
-
-    public T Pop()
-    {
-        return this.drinks.Last();
-    }
-
-    public T[] Push(T drink)
-    {
-        drinks[drinks.Length] = drink;
-        return drinks;
-    }
+    public List<ILiquid> Getraenke { get; set; } = [];
 }

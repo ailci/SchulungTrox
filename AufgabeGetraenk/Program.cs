@@ -13,6 +13,15 @@ internal class Program
 
         Console.WriteLine(t.ToString());
 
+        Trinkhalle trinkhalle = new Trinkhalle();
+        trinkhalle.Getraenke.Add(coffee);
+        trinkhalle.Getraenke.Add(t);
+        trinkhalle.Getraenke.Add(new Cleanser());
+
+        foreach (var liquid in trinkhalle.Getraenke)
+        {
+            Console.WriteLine(liquid.GetType().Name);
+        }
 
     }
 }
