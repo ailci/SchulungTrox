@@ -1,10 +1,12 @@
-﻿using Application.ViewModels;
+﻿using Application.Contracts;
+using Application.ViewModels;
 using Data;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using UI.Client.Services;
 using Util;
 
 
@@ -28,6 +30,10 @@ var host = Host.CreateDefaultBuilder(args)
             //Sqlite
             options.UseSqlite("Data Source=projektqotd.db");
         });
+
+        //DependencyInject
+        services.AddScoped<IQotdService, QotdService>();
+        services.AddKeyedScoped<IQotdService, QotdApiService>("qotdapi");
     })
     .Build();
 
@@ -39,21 +45,11 @@ ShowQuoteOfTheDay();
 
 void ShowQuoteOfTheDay()
 {
-    var qotdDbContext = host.Services.GetRequiredService<QotdDbContext>(); //Butler der den Kühlschrank öffnet und eine Instanz von DbContext holt
+    //var qotdDbContext = host.Services.GetRequiredService<QotdDbContext>(); //Butler der den Kühlschrank öffnet und eine Instanz von DbContext holt
+    var qotdService = host.Services.GetRequiredService<IQotdService>();
+    var qotdApiService = host.Services.GetRequiredKeyedService<IQotdService>("qotdapi");
 
-    var quotes = qotdDbContext.Quotes.Include(a => a.Author).ToList(); //Include auch Autoren holen
-
-    var randomQuote = quotes.Shuffle().First(); // C#13 mischen
-
-    //Manuelles Mapping (alternative AutoMapper)
-    var qotdVm = new QuoteOfTheDayViewModel
-    {
-        Id = randomQuote.Id,
-        AuthorName = randomQuote.Author?.Name ?? string.Empty,
-        AuthorDescription = randomQuote.Author?.Description ?? string.Empty,
-        AuthorBirthDate = randomQuote.Author?.BirthDate,
-        QuoteText = randomQuote.QuoteText
-    };
+    var qotdVm = qotdService.GetQuoteOfTheDayViewModel();
 
     ColorConsole.WriteLine("\nSpruch Des Tages\n", ConsoleColor.Green);
     ColorConsole.WriteLine($"\"{qotdVm.QuoteText}\"", ConsoleColor.Yellow);
