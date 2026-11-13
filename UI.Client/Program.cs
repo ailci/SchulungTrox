@@ -34,6 +34,7 @@ var host = Host.CreateDefaultBuilder(args)
         //DependencyInject
         services.AddScoped<IQotdService, QotdService>();
         services.AddKeyedScoped<IQotdService, QotdApiService>("qotdapi");
+        services.AddKeyedScoped<IQotdService, FakeQotdService>("fakeqotd");
     })
     .Build();
 
@@ -48,6 +49,7 @@ void ShowQuoteOfTheDay()
     //var qotdDbContext = host.Services.GetRequiredService<QotdDbContext>(); //Butler der den Kühlschrank öffnet und eine Instanz von DbContext holt
     var qotdService = host.Services.GetRequiredService<IQotdService>();
     var qotdApiService = host.Services.GetRequiredKeyedService<IQotdService>("qotdapi");
+    var fakeQotdService = host.Services.GetRequiredKeyedService<IQotdService>("fakeqotd");
 
     var qotdVm = qotdService.GetQuoteOfTheDayViewModel();
 
