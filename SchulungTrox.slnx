@@ -6,6 +6,12 @@
     <Project Path="AufgabeMaximumArray/AufgabeMaximumArray.csproj" />
     <Project Path="AufgabeTextRueckwaerts/AufgabeTextRueckwaerts.csproj" />
   </Folder>
+  <Folder Name="/ProjektQotd/">
+    <Project Path="Application/Application.csproj" Id="c6533c9a-ec87-4d28-8710-dd01f6a1df80" />
+    <Project Path="Data/Data.csproj" Id="b4105fb2-cdfd-4cd7-a2af-0f1c0ff77952" />
+    <Project Path="Domain/Domain.csproj" Id="e5eacbee-8610-4b4b-a086-207e28571ccd" />
+    <Project Path="UI.Client/UI.Client.csproj" Id="387c665a-9447-4fb4-bc69-40aee33dc669" />
+  </Folder>
   <Folder Name="/Utilities/">
     <Project Path="Util/Util.csproj" Id="559dacca-340b-4d40-b9f3-9058b64ae25d" />
   </Folder>
