@@ -19,5 +19,7 @@ internal class Program
         Person p2 = new Person("BlaBlubb");
         Console.WriteLine(Info.GetAktuellesDatum());
 
+        //DI
+        DepenInj depenInj = new DepenInj(new Veltins());
     }
 }
